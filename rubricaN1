@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'lato', sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+
+<script>
+
+var imgs = new Array ("trophy2","star_gold","starb","star","gray_star","phantom","phantom")
+  
+var tias = new Array ( "1571",
+"0017",
+"0451",
+"1091",
+"3434",
+"3639",
+"3965",
+"2889",
+"3346",
+"6108",
+"7231",
+"9390",
+"2960",
+"5633",
+"8179",
+"8549",
+"0837",
+"6784",
+"6997",
+"8116",
+"8531",
+"9589",
+"9694",
+"9759",
+"9988",
+"0722",
+"2229",
+"2563",
+"7257",
+"4647"
+)
+
+var ns = [[0,10,10,7.5,10,0,0,9,9.5,10],
+[10,9.5,10,7,10,10,10,9,10,10],
+[10,10,10,6,10,10,10,9,10,10],
+[0,3,0,7.5,6,0,10,7,8,0],
+[10,10,10,9,10,10,10,9,10,10],
+[10,10,10,7.5,10,10,10,9,10,0],
+[10,10,10,8,10,10,10,9,10,10],
+[10,10,10,9,10,0,10,9,8,10],
+[10,10,10,8.5,0,0,10,0,10,0],
+[10,10,10,8.5,10,10,10,9,10,9.1],
+[10,10,0,7,10,10,10,0,0,0],
+[10,0,10,6,10,0,10,7,8,0],
+[10,10,0,7.5,10,8,10,7,8,10],
+[9,10,10,6,10,0,10,7,8,10],
+[10,10,10,7.5,10,0,10,9,10,0],
+[10,10,10,8.5,10,10,10,9,10,10],
+[10,3,10,8.5,10,0,5,7,7.5,10],
+[10,10,10,7,10,10,10,9,10,10],
+[10,10,10,8.5,10,0,10,9,10,10],
+[10,10,10,9,10,0,10,9,10,10],
+[10,10,10,6,10,10,10,9,10,10],
+[10,10,10,9,10,0,10,9,10,10],
+[10,10,10,6,10,0,5,7,8,10],
+[10,10,0,8,10,8.5,10,7,8,10],
+[10,10,10,6,10,9.5,10,7,10,0],
+[10,10,10,8,10,0,10,0,7.5,10],
+[10,10,10,8.5,10,10,10,9,10,10],
+[0,10,10,9,10,0,10,9,7.5,10],
+[9,0,10,0,7,0,0,0,0,0],
+[10,3,10,7.5,10,10,10,8.5,9.5,10]]
+
+var challenges = new Array("Aula1T","Aula2T","Aula3T","Infográfico","Aula7S","Aula8S","Aula9T","Aula11J","Aula12J","TP1J")
+
+
+var compl = new Array (".png","/" )
+</script>
+</head>
+<BODY>
+  <h2>Avaliação Formativa </h2>
+  <TABLE>
+      <TR><TD>TIA</TD>
+      
+      
+  
+  <script>
+  var NDES = challenges.length
+  for (i=0;i<NDES;i++)
+    document.write('<TD BGCOLOR="#FFFFC0">'+challenges[i]+"</TD>")
+  document.write("</TR>")
+ 
+ 
+  var NN = 2;
+  function f(k,n) //yestrophy
+  { str = "<IMG SRC='"+imgs[5-(ns[k][n])]+".png' WIDTH=50 HEIGHT=50>" 
+  return str; }
+  
+  function g(k,n) //notrophy
+  { str = "<IMG SRC='"+imgs[6-(ns[k][n])]+".png' WIDTH=50 HEIGHT=50>" 
+  return str; }
+  
+  /*function mount(k,i)
+  {
+   return ns[k][i]?"<A HREF='desafio"+(k+1)+"/"+nomes[i]+compl[k]+"' TARGET='_neue'>Link</A>":""
+  }*/
+
+   for (i=0; i<tias.length; i++)
+   {  document.write("<TR><TD>"+ tias[i]+"</TD>")
+      for (k=0; k<NDES; k++)
+        if (k!=3) document.write("<TD>"+g(i,k)+"</TD>");
+        else document.write("<TD>"+f(i,k)+"</TD>")
+         
+      document.write("</TR>")   }
+  document.write("</TABLE>")
+  </script>
+ </ul>
+</div>
+</body></html>
