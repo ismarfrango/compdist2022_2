@@ -95,7 +95,7 @@ var ns = [[0,10,10,7.5,10,0,0,9,9.5,10],
 [10,3,10,7.5,10,10,10,8.5,9.5,10]]
 
 var challenges = new Array("Aula1T","Aula2T","Aula3T","Infográfico","Aula7S","Aula8S","Aula9T","Aula11J","Aula12J","TP1J")
-
+var weights = [0.5,0.5,0.5,2,2,2,0.5,1,2,2]
 
 var compl = new Array (".png","/" )
 </script>
@@ -110,7 +110,7 @@ var compl = new Array (".png","/" )
   <script>
   var NDES = challenges.length
   for (i=0;i<NDES;i++)
-    document.write('<TD BGCOLOR="#FFFFC0">'+challenges[i]+"</TD>")
+    document.write('<TD BGCOLOR="#FFFFC0">'+challenges[i]+"<small>"+weights[i]+"</small></TD>")
   document.write("</TR>")
  
     function calc(num)
