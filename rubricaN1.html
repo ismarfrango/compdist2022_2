@@ -29,7 +29,7 @@ th, td {
 
 <script>
 
-var imgs = new Array ("trophy2","star_gold","starb","star","gray_star","phantom","phantom")
+var imgs = new Array ("trophy2","star_gold","starb","star","star_gray","phantom")
   
 var tias = new Array ( "1571",
 "0017",
@@ -113,14 +113,23 @@ var compl = new Array (".png","/" )
     document.write('<TD BGCOLOR="#FFFFC0">'+challenges[i]+"</TD>")
   document.write("</TR>")
  
+    function calc(num)
+    {
+      return num>=9.5 ? 0 : num>8 ? 1 : num>7 ? 2 : num>5 ? 3 : num==0? 5 : 4
+    }
+    
+    function calc1(num)
+    {
+      return num>9 ? 1 : num>8 ? 2 : num>6 ? 3 : num==0? 5 : 4
+    }
  
   var NN = 2;
   function f(k,n) //yestrophy
-  { str = "<IMG SRC='"+imgs[5-(ns[k][n])]+".png' WIDTH=50 HEIGHT=50>" 
+  { str = "<IMG SRC='"+imgs[(calc(ns[k][n])])+".png' WIDTH=50 HEIGHT=50>" 
   return str; }
   
   function g(k,n) //notrophy
-  { str = "<IMG SRC='"+imgs[6-(ns[k][n])]+".png' WIDTH=50 HEIGHT=50>" 
+  { str = "<IMG SRC='"+imgs[(calc1(ns[k][n])])+".png' WIDTH=50 HEIGHT=50>" 
   return str; }
   
   /*function mount(k,i)
