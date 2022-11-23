@@ -1,0 +1,22 @@
+<HTML>
+<BODY>
+<script>
+function f()
+{
+ v = new Array("exponencial","logaritmo","seno","cosseno")
+ x = document.getElementById("TIA1").value
+ y = document.getElementById("TIA2").value
+ n = (isNaN(x) || isNaN(y)) ? 0 : 1+((x+y)%4)
+ str = (n==0) ? "ERRO" : ("Série de McLaurin "+n+": "+v[n-1])
+ alert(str)
+}
+</script>
+<CENTER>
+<FONT FACE="Calibri" SIZE=+4>Sorteio</FONT> <P/:
+<FORM NAME="TIAS">
+TIA 1:<INPUT TYPE="TEXT" ID="TIA1"><BR/>
+TIA 2:<INPUT TYPE="TEXT" VALUE="0" ID="TIA2"><BR/>
+<INPUT TYPE=BUTTON VALUE="OK" onClick="f()"></FORM>
+</BODY>
+</HTML>
+
